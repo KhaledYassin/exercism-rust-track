@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'acronym'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=acronym"
+                ],
+                "filter": {
+                    "name": "acronym",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'acronym'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=acronym",
+                    "--package=acronym"
+                ],
+                "filter": {
+                    "name": "acronym",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'acronym'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=acronym",
+                    "--package=acronym"
+                ],
+                "filter": {
+                    "name": "acronym",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'acronym'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=acronym",
+                    "--package=acronym"
+                ],
+                "filter": {
+                    "name": "acronym",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

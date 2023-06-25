@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'affine-cipher'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=affine-cipher"
+                ],
+                "filter": {
+                    "name": "affine-cipher",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'affine-cipher'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=affine-cipher",
+                    "--package=affine-cipher"
+                ],
+                "filter": {
+                    "name": "affine-cipher",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'affine-cipher'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=affine-cipher",
+                    "--package=affine-cipher"
+                ],
+                "filter": {
+                    "name": "affine-cipher",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'affine-cipher'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=affine-cipher",
+                    "--package=affine-cipher"
+                ],
+                "filter": {
+                    "name": "affine-cipher",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

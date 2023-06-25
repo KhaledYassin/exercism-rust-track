@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'scrabble-score'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=scrabble-score"
+                ],
+                "filter": {
+                    "name": "scrabble-score",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'scrabble-score'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=scrabble-score",
+                    "--package=scrabble-score"
+                ],
+                "filter": {
+                    "name": "scrabble-score",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'scrabble-score'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=scrabble-score",
+                    "--package=scrabble-score"
+                ],
+                "filter": {
+                    "name": "scrabble-score",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'scrabble-score'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=scrabble-score",
+                    "--package=scrabble-score"
+                ],
+                "filter": {
+                    "name": "scrabble-score",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

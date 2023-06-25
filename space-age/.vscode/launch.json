@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'space-age'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=space-age"
+                ],
+                "filter": {
+                    "name": "space-age",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'space-age'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=space-age",
+                    "--package=space-age"
+                ],
+                "filter": {
+                    "name": "space-age",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'space-age'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=space-age",
+                    "--package=space-age"
+                ],
+                "filter": {
+                    "name": "space-age",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'space-age'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=space-age",
+                    "--package=space-age"
+                ],
+                "filter": {
+                    "name": "space-age",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

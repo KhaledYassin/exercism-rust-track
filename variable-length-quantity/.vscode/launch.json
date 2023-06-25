@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'variable-length-quantity'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=variable-length-quantity"
+                ],
+                "filter": {
+                    "name": "variable-length-quantity",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'variable-length-quantity'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=variable-length-quantity",
+                    "--package=variable-length-quantity"
+                ],
+                "filter": {
+                    "name": "variable-length-quantity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'variable-length-quantity'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=variable-length-quantity",
+                    "--package=variable-length-quantity"
+                ],
+                "filter": {
+                    "name": "variable-length-quantity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'variable-length-quantity'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=variable-length-quantity",
+                    "--package=variable-length-quantity"
+                ],
+                "filter": {
+                    "name": "variable-length-quantity",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
