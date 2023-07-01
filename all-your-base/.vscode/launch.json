@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'allyourbase'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=allyourbase"
+                ],
+                "filter": {
+                    "name": "allyourbase",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'allyourbase'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=allyourbase",
+                    "--package=allyourbase"
+                ],
+                "filter": {
+                    "name": "allyourbase",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'allyourbase'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=allyourbase",
+                    "--package=allyourbase"
+                ],
+                "filter": {
+                    "name": "allyourbase",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'all-your-base'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=all-your-base",
+                    "--package=allyourbase"
+                ],
+                "filter": {
+                    "name": "all-your-base",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
